@@ -4,16 +4,16 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: danielsodium
-      url-base: https://github.com/danielsodium
+    # - name: danielsodium
+    #   url-base: https://github.com/danielsodium
     # Additional modules containing boards/shields/custom code can be listed here as well
     # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
   projects:
     - name: zmk
       remote: zmkfirmware
       import: app/west.yml
-    - name: nice-view-gif
-      remote: danielsodium
-      revision: bongo-cat
+    # - name: nice-view-gif
+    #   remote: danielsodium
+    #   revision: bongo-cat
   self:
     path: config

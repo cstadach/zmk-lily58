@@ -38,11 +38,11 @@
 
         default_layer {
             bindings = <
-&kp ESC    &kp N1  &kp N2  &kp N3       &kp N4      &kp N5                         &kp N6  &kp N7           &kp N8       &kp N9   &kp N0    &kp MINUS
-&kp TAB    &kp Q   &kp W   &td LCTRL E  &td LGUI R  &kp T                          &kp Y   &td RIGHT_GUI U  &td RCTRL I  &kp O    &kp P     &kp BSLH
-&kp LSHFT  &kp A   &kp S   &kp D        &tl 3 F     &kp G                          &kp H   &kp J            &kp K        &kp L    &kp SEMI  &kp SQT
-&kp LCTRL  &kp Z   &kp X   &kp C        &kp V       &kp B   &kp LBKT     &kp RBKT  &kp N   &kp M            &kp COMMA    &kp DOT  &kp FSLH  &kp RSHFT
-                           &kp LALT     &kp LGUI    &mo 1   &kp SPACE    &kp RET   &mo 2   &kp BSPC         &kp RGUI
+&kp ESC     &kp N1  &kp N2      &kp N3       &kp N4      &kp N5                         &kp N6  &kp N7           &kp N8       &kp N9      &kp N0    &kp MINUS
+&kp TAB     &kp Q   &td LALT W  &td LCTRL E  &td LGUI R  &kp T                          &kp Y   &td RIGHT_GUI U  &td RCTRL I  &td RALT O  &kp P     &kp BSLH
+&kp ESCAPE  &kp A   &kp S       &kp D        &tl 3 F     &kp G                          &kp H   &kp J            &kp K        &kp L       &kp SEMI  &kp SQT
+&kp LSHIFT  &kp Z   &kp X       &kp C        &kp V       &kp B   &kp LBKT     &kp RBKT  &kp N   &kp M            &kp COMMA    &kp DOT     &kp FSLH  &kp RSHFT
+                                &none        &none       &mo 1   &kp SPACE    &kp RET   &mo 2   &kp BSPC         &none
             >;
         };
 

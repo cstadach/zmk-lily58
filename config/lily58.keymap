@@ -22,6 +22,15 @@
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
         };
+
+        tl: tl {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TL";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+            bindings = <&to>, <&kp>;
+        };
     };
 
     keymap {
@@ -29,11 +38,11 @@
 
         default_layer {
             bindings = <
-&kp ESC    &kp N1  &kp N2  &kp N3       &kp N4    &kp N5                         &kp N6  &kp N7    &kp N8       &kp N9   &kp N0    &kp MINUS
-&kp TAB    &kp Q   &kp W   &td LCTRL E  &kp R     &kp T                          &kp Y   &kp U     &td RCTRL I  &kp O    &kp P     &kp BSLH
-&kp LSHFT  &kp A   &kp S   &kp D        &kp F     &kp G                          &kp H   &kp J     &kp K        &kp L    &kp SEMI  &kp SQT
-&kp LCTRL  &kp Z   &kp X   &kp C        &kp V     &kp B   &kp LBKT     &kp RBKT  &kp N   &kp M     &kp COMMA    &kp DOT  &kp FSLH  &kp RSHFT
-                           &kp LALT     &kp LGUI  &mo 1   &kp SPACE    &kp RET   &mo 2   &kp BSPC  &kp RGUI
+&kp ESC    &kp N1  &kp N2  &kp N3       &kp N4      &kp N5                         &kp N6  &kp N7           &kp N8       &kp N9   &kp N0    &kp MINUS
+&kp TAB    &kp Q   &kp W   &td LCTRL E  &td LGUI R  &kp T                          &kp Y   &td RIGHT_GUI U  &td RCTRL I  &kp O    &kp P     &kp BSLH
+&kp LSHFT  &kp A   &kp S   &kp D        &tl 3 F     &kp G                          &kp H   &kp J            &kp K        &kp L    &kp SEMI  &kp SQT
+&kp LCTRL  &kp Z   &kp X   &kp C        &kp V       &kp B   &kp LBKT     &kp RBKT  &kp N   &kp M            &kp COMMA    &kp DOT  &kp FSLH  &kp RSHFT
+                           &kp LALT     &kp LGUI    &mo 1   &kp SPACE    &kp RET   &mo 2   &kp BSPC         &kp RGUI
             >;
         };
 
@@ -54,6 +63,16 @@
 &kp C_VOL_DN     &kp C_PREVIOUS  &kp C_PP      &kp C_NEXT    &kp F5        &kp F6                          &kp LEFT     &kp DOWN   &kp UP     &kp RIGHT  &trans    &trans
 &kp C_MUTE       &kp F8          &kp F9        &kp F10       &kp F11       &kp F12       &trans    &trans  &kp KP_PLUS  &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH
                                                &trans        &trans        &trans        &trans    &trans  &trans       &trans     &trans
+            >;
+        };
+
+        arrows {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &trans         &trans        &trans           &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &trans         &trans        &trans           &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &kp LEFT_ARROW  &kp DOWN       &kp UP_ARROW  &kp RIGHT_ARROW  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp HOME        &kp PAGE_DOWN  &kp PAGE_UP   &kp END          &trans  &trans
+                        &trans  &trans  &trans  &trans    &trans  &trans          &trans         &trans
             >;
         };
     };

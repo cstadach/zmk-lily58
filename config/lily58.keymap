@@ -12,6 +12,19 @@
 &soft_off { hold-time-ms = <2000>; };
 
 / {
+    behaviors {
+        hrm_e: hrm_e {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HRM_E";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+            hold-trigger-key-positions = <14>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
